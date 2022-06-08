@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+    <div class="hero-section" id="first-section">
+        <div class="heading-wrapper">
+            <h1 class="lineUp">What is your current <br>quarterly electricity bill? </h1>
+        </div>
+        <div class="range">
+            <div class="sliderValue">
+                <span>$500</span>
+            </div>
+            <div class="field">
+                <div class="value-left">$50</div>
+                <input id="input-el" type="range" name="" value="500" min="50" max="1500" step="5">
+                <div class="value-right">$1500</div>
+            </div> 
+        </div>
+        <button id="next-btn">&#8250;</button>         
+    </div>
+
+    <div class="hero-section" id="second-section">
+        <div class="heading-wrapper">
+            <h2 class="lineUp">If you're a houseowner lives in NSW<br>in 1 year you could save</h2>
+            <span class="big-num">$1288</span>
+        </div>
+        <div class="num-wrapper">
+            <div class="num-card">
+                <h3>Reduce</h3>
+                <!-- The number supposed to be interactive with input value due to the tech issue -->
+                <h1>5</h1>
+                <h3>tonnes of CO2</h3>
+            </div>
+            <div class="num-card">
+                <h3>Achieve</h3>
+                <!-- The number supposed to be interactive with input value due to the tech issue -->
+                <h1>233</h1>
+                <h3>trees carbon offset</h3>
+            </div>
+            <div class="num-card">
+                <h3>Earn up to</h3>
+                <!-- The number supposed to be interactive with input value due to the tech issue -->
+                <h1>781</h1> 
+                <h3>cups of coffee</h3>
+            </div>
+        </div>
+        <a href="#background"><button class="down">&#8250;</button></a>
+    
+    </div>
+
+
+    <div class="section" id="background">
+        <div class="wrap">
+            <h1 class="gradient">Switch to solar energy <br>
+                and never pay another <br>
+             <span class="underline">expensive electricity bill</span></h1>
+        </div>
+        <div class="background-section">
+            <div class="content-wrapper">
+                <h3 class="accent">What is solar energy?</h3>
+                <p>
+                    Solar power is energy that converts the sun (sunlight) into electricity or heat. There are two
+                    main
+                    types of solar energy technologies:
+                </p>
+                <h4>(1) Solar thermal</h4>
+                <p>
+                    Solar thermal converts solar radiation into thermal energy (heat), which can be used to create
+                    steam
+                    to drive an electricity generator.
+                </p>
+                <h4>(2) Solar photovoltaic</h4>
+                <p>
+                    Solar photovoltaic (PV) converts sunlight directly into electricity, and the PV system can be
+                    installed on rooftops, and integrated into building designs and vehicles. Solar PV panels are
+                    currently the most widespread type of solar PV technology
+                </p>
+            </div>
+            <div class="img-wrapper">
+                <img class="solar-system" src="./img/spp_illustration.png" alt="Home solar system demonstration">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="card-container">
+            <div class="card-2">
+                <div class="pv-price">
+                    <div id="solar-price-chart" class="pv-chart"></div>
+                </div>
+            </div>
+            <div class="card-2">
+                <div class="card-content">
+                    <p>
+                        The rapid cost reductions make solar power more accessible. Between 2010 and 2020, the global
+                        costs
+                        dropped by
+                    </p>
+                    <p><span class="gradient-num">540%</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="title-container">
+            <h2><span class="accent">How much</span><br>
+                can you really save <br>
+                with solar energy in NSW?</h2>
+        </div>
+
+        <div class="card-container">
+            <div class="card-3">
+                <div class="card-content">
+                    <h4>The average inital cost for a solar system in NSW was</h4>
+                    <h1 class="gradient">$4,827</h1>
+                </div>
+            </div>
+            <div class="card-3">
+                <div class="card-content">
+                    <h4>Estimated yearly savings</h4>
+                    <h1 class="gradient">$1,138</h1>
+                </div>
+            </div>
+            <div class="card-3">
+                <div class="card-content">
+                    <h4>Estimated payback period</h4>
+                    <h1 class="gradient">4 Years</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-container">
+            <div class="title-container">
+                <h4 class="accent">CASE STUDY</h4>
+                <h3>The future benefit of<br>solar energy investment</h3>
+                <p>A typical homeowner's return curve after investing in solar system over the next fifteen years in Sydney NSW</p>
+            </div>
+            <div class="gap-num">21k+</div>
+            <div id="invest-chart" class="invest-chart"></div>
+        </div>
+
+    </div>
+    
+    <div class="section">
+        <div class="title-container">
+            <h2>"What if there are bad weather days, how can I make sure the electricity supply works fine in my home?"
+            </h2>
+        </div>
+        <div class="weather-section">
+
+            <div class="img-wrapper">
+                <div id="sunshine-chart" class="sunshine-chart"></div>
+            </div>
+
+            <div class="content-wrapper">
+                <div>
+                    <img class="icon" src="./img/cloud-icon.png" alt="cloud icon">
+                    <p>The solar panel can produce electricity in cloudy or rainy weather! They will work as normal but
+                        their efficiency may drop due to overcast skies.
+                    </p>
+                </div>
+                <div>
+                    <img class="icon" src="./img/grid-icon.png" alt="grid icon">
+                    <p>
+                        Grid systems will supply energy when there is no sunlight or the electricity produced is not
+                        enough. Instead, excrescent electricity will be send back to Grid systems for credits.This is called feed-in tariff
+                        (FiT).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-3">
+                <div class="card-content">
+                    <h3 class="accent">Government Incentives</h3>
+                    <p>Government provides financial incentives to encourage more people to install a solar PV system at
+                        property.</p>
+                </div>
+            </div>
+            <div class="card-3">
+                <div class="card-content">
+                    <p>NSW Government provides substantial rebates up to</p>
+                    <h2 class="accent">$3116</h2>
+                </div>
+            </div>
+            <div class="card-3">
+                <div class="card-content">
+                    <p>Average credit on quarterly solar bill in NSW</p>
+                    <h2 class="accent">$125</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+            <div class="title-container">
+                <h2>Not only on financially<br>
+                    <span class="gradient-text">but environmentally</span> deeper meaning
+                </span></h2>
+            </div>
+            <div class="card-container">
+                <div class="card-2">
+                    <div class="card-content">
+                        <div id="greenhouse-gas-chart" class="greenhouse-chart"></div>
+                    </div>
+                </div>
+    
+                <div class="card-2">
+                    <div class="card-content">
+                        <div id="electricity-chart" class="elec-chart"></div>
+                        <p>Compared with traditional fossil fuels, 
+                            solar energy is having a profound impact on the environment 
+                            by greatly reducing the CO2 emissions, 
+                            that all households in Australia can access whilst doing their 
+                            bit for the environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="section">
+            <div class="title-container">
+                <h2><span class="gradient-text">The future</span><br>is made up by every<br>decision you make now
+                </h2>
+            </div>
+            <div class="card-container">
+                <div class="card-2">
+                    <div class="wrap">
+                        <div>
+                            <h3 class="accent">Creating a better future</h3>
+                            <p>The Australian government is committed to
+                                achieving Carbon Neutral in electricity generation by 2050.
+                                The trend of using renewable energy is
+                                gradually growing.</p>
+                            <p>By choosing to use solar energy, we can build a
+                                brighter and healthier future for our next
+                                generation – all whilst saving hundreds of dollars
+                                each quarter on the traditional electricity bill as an added bonus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-2">
+                    <div class="card-content">
+                        <div id="total-chart" class="total-chart"></div>
+                    </div>
+                </div>
+            </div>         
+    </div>
+
+    <div class="section">
+        <div class="bottom-container">
+            <h3 class="gradient"> By looking at installing the solar system as a way to reduce your electricity costs for your home or business by using your own generated energy, you can even earn credits from the energy you sent back to the grid. There is no doubt that this long-term investment is worthwhile for you, your next generation and for the environment.</h3>
+        </div>
+    </div>
+
+
+    <script src="function.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
